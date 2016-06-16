@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
 
 namespace Stateless
 {
@@ -17,7 +18,7 @@ namespace Stateless
 
             var arg = args[index];
 
-            if (arg != null && !argType.IsAssignableFrom(arg.GetType()))
+            if (arg != null && !argType.GetTypeInfo().IsAssignableFrom(arg.GetType().GetTypeInfo()))
                 throw new ArgumentException(
                     string.Format(ParameterConversionResources.WrongArgType, index, arg.GetType(), argType));
 

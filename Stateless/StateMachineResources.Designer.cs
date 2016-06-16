@@ -10,6 +10,7 @@
 
 namespace Stateless {
     using System;
+    using System.Reflection;
     
     
     /// <summary>
@@ -39,7 +40,7 @@ namespace Stateless {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Stateless.StateMachineResources", typeof(StateMachineResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Stateless.StateMachineResources", typeof(StateMachineResources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

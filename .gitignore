@@ -5,3 +5,7 @@ Stateless.userprefs
 
 # Visual Studio 2015 cache/options directory
 .vs/
+
+# Resharper Cache Objects
+
+_ReSharper.Caches/
